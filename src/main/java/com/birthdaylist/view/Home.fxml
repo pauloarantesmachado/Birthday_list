@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<AnchorPane
+        maxHeight="-Infinity"
+        maxWidth="-Infinity"
+        minHeight="-Infinity"
+        minWidth="-Infinity"
+        prefHeight="768.0"
+        prefWidth="1366.0"
+        style="-fx-background-color: #D3D3D3;"
+        xmlns="http://javafx.com/javafx/15.0.1"
+        xmlns:fx="http://javafx.com/fxml/1"
+        fx:controller="com.birthdaylist.controller.HomeController">
+    <children>
+        <Text fill="#8B0000" layoutX="600" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Invited"
+              wrappingWidth="190">
+            <font>
+                <Font size="32.0"/>
+            </font>
+        </Text>
+        <Label
+                layoutX="300.0"
+                layoutY="160.0"
+                prefHeight="17.0"
+                prefWidth="210.0"
+                text="Name"
+                textFill="#8B0000">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField
+            fx:id="name"
+            layoutX="300.0"
+            layoutY="190.0"
+            prefHeight="27.0"
+            prefWidth="243.0"
+            promptText="Name Guest..."
+            style="-fx-border-color: #8B0000;-fx-text-color: #ffff;"/>
+        <Label
+                layoutX="300.0"
+                layoutY="220.0"
+                prefHeight="17.0"
+                prefWidth="210.0"
+                text="Phone"
+                textFill="#8B0000">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <TextField
+            fx:id="phone"
+            layoutX="300.0"
+            layoutY="260.0"
+            prefHeight="27.0"
+            prefWidth="243.0"
+            promptText="Phone Guest"
+            style="-fx-border-color: #8B0000; -fx-text-color: #ffff;"/>
+        <Label
+                layoutX="300.0"
+                layoutY="290.0"
+                prefHeight="17.0"
+                prefWidth="243.0"
+                text="Kinship"
+                textFill="#8B0000">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <ChoiceBox
+            fx:id="typeKinship"
+            layoutX="300.0"
+            layoutY="330.0"
+            prefHeight="27.0"
+            prefWidth="243.0"
+            style="-fx-border-color: #8B0000;">
+            <cursor>
+                <Cursor fx:constant="DEFAULT"/>
+            </cursor>
+        </ChoiceBox>
+        <Button
+                fx:id="buttonGo"
+                layoutX="300.0"
+                layoutY="400.0"
+                mnemonicParsing="false"
+                onAction="#validator"
+                prefHeight="35"
+                prefWidth="243.0"
+                style="-fx-background-color: #ffff; -fx-text-color: #8B0000;"
+                text="Send"/>
+        <TableView
+            fx:id="table"
+            editable="true"
+            onMouseClicked="#rowClicked"
+            layoutX="600"
+            layoutY="160"
+            prefHeight="500.0"
+            prefWidth="700.0"
+            style="-fx-border-color: #8B0000;">
+            <columns>
+                <TableColumn
+                        fx:id="nameGuest"
+                        prefWidth="600.0"
+                        text="Name Guest"/>
+                <TableColumn
+                        fx:id="phoneGuest"
+                        prefWidth="600.0"
+                        text="Phone Guest"/>
+                <TableColumn
+                        fx:id="kinship"
+                        prefWidth="344.0"
+                        text="Kinship"/>
+                <TableColumn
+                        fx:id="delete"
+                        prefWidth="344.0"
+                        text="Delete Guest" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+            </columnResizePolicy>
+        </TableView>
+    </children>
+
+</AnchorPane>
